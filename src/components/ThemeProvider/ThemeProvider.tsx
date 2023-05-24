@@ -44,4 +44,4 @@ const ThemeProvider: FC<IThemeProviderProps> = ({ children }) => {
   );
 };
 
-export default { ThemeProvider, useThemeContext };
+export { ThemeProvider, useThemeContext };
