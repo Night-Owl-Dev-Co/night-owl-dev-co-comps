@@ -6,7 +6,7 @@ export interface INavTabProps extends LinkProps {
   to: string;
 }
 
-const NavTab:FC<INavTabProps> = ({ name, to, ...rest }) => {
+const NavTab: FC<INavTabProps> = ({ name, to, ...rest }) => {
   return (
     <Link to={to} {...rest}>
       {name}

@@ -8,18 +8,16 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
-const Button:FC<IButtonProps> = ({ bgColor,  color, text, ...rest }) =>
- 
-  {
-    const buttonStyles = useMemo(
-      () => ({ color, backgroundColor: bgColor, borderColor: bgColor }),
-      [color, bgColor]
-    );
-    return (
-      <button className="custom-btn" style={buttonStyles} {...rest}>
-        {text}
-      </button>
-    );
-  };
+const Button: FC<IButtonProps> = ({ bgColor, color, text, ...rest }) => {
+  const buttonStyles = useMemo(
+    () => ({ color, backgroundColor: bgColor, borderColor: bgColor }),
+    [color, bgColor]
+  );
+  return (
+    <button className="custom-btn" style={buttonStyles} {...rest}>
+      {text}
+    </button>
+  );
+};
 
 export default Button;
