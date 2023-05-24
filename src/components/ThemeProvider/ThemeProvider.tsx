@@ -7,7 +7,7 @@ import {
   PropsWithChildren,
 } from 'react';
 
-const ThemeContext = createContext(null);
+const ThemeContext = createContext({});
 
 const useThemeContext = () => useContext(ThemeContext);
 
@@ -25,4 +25,4 @@ const ThemeProvider: FC<IThemeProviderProps> = ({ children }) => {
   );
 };
 
-export default { ThemeProvider };
+export default { ThemeProvider, useThemeContext };
