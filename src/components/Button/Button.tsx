@@ -13,6 +13,7 @@ const Button: FC<IButtonProps> = ({ bgColor, color, text, ...rest }) => {
     () => ({ color, backgroundColor: bgColor, borderColor: bgColor }),
     [color, bgColor]
   );
+
   return (
     <button className="custom-btn" style={buttonStyles} {...rest}>
       {text}
