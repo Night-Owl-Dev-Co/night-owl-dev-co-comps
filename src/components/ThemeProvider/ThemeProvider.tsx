@@ -28,14 +28,10 @@ const ThemeContext = createContext({} as any);
 
 const useThemeContext = () => useContext(ThemeContext);
 
-export interface IThemeProviderProps extends PropsWithChildren {
-  theme: string;
-}
-
-const ThemeProvider: FC<IThemeProviderProps> = ({ children }) => {
+const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, withTheme] = useState("default");
 
-  const ThemeStyle = useMemo(() => themes[theme], [theme]);
+  const ThemeStyle = useMemo(() => themes[theme] || themes["default"], [theme]);
 
   return (
     <ThemeContext.Provider value={{ ThemeStyle, withTheme }}>
