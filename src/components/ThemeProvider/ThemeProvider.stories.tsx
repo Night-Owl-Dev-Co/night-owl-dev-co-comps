@@ -1,10 +1,10 @@
-import { StoryObj, Meta } from "@storybook/react";
-import { ThemeProvider, useThemeContext } from "./ThemeProvider";
-import Button from "../Button";
-import { useEffect } from "react";
+import { StoryObj, Meta } from '@storybook/react';
+import { ThemeProvider, useThemeContext } from './ThemeProvider';
+import Button from '../Button';
+import { useEffect } from 'react';
 
 export default {
-  title: "ReactComponentLibrary/ThemeProvider",
+  title: 'ReactComponentLibrary/ThemeProvider',
   component: ThemeProvider,
 } as Meta<typeof ThemeProvider>;
 
@@ -13,9 +13,10 @@ const ButtonWithTheme = ({ theme }: { theme: string }) => {
   useEffect(() => {
     if (theme) withTheme(theme);
   }, [theme]);
+
   return (
     <Button
-      bgColor={ThemeStyle.backgroundColor}
+      bg={ThemeStyle.backgroundColor}
       color={ThemeStyle.textColor}
       text="Button"
     />
@@ -23,7 +24,7 @@ const ButtonWithTheme = ({ theme }: { theme: string }) => {
 };
 
 export const Template: StoryObj<typeof ButtonWithTheme> = {
-  args: { theme: "default" },
+  args: { theme: 'default' },
   render: (args) => (
     <ThemeProvider>
       <ButtonWithTheme {...args} />

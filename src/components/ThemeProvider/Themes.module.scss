@@ -1,0 +1,15 @@
+$color-black: #252525;
+$color-grey: #504f4d;
+$color-orange: #ffa72a;
+$color-light-orange: #ffc777;
+$color-orange-brown: #7f5315;
+$color-green: #458622;
+
+:export {
+  colorBlack: $color-black;
+  colorGrey: $color-grey;
+  colorOrange: $color-orange;
+  colorLightOrange: $color-light-orange;
+  colorOrangeBrown: $color-orange-brown;
+  colorGreen: $color-green;
+}
