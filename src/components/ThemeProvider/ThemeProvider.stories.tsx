@@ -6,6 +6,10 @@ import { useEffect } from 'react';
 export default {
   title: 'ReactComponentLibrary/ThemeProvider',
   component: ThemeProvider,
+  tags: ['autodocs'],
+  argTypes: {
+    theme: { control: 'text' },
+  },
 } as Meta<typeof ThemeProvider>;
 
 const ButtonWithTheme = ({ theme }: { theme: string }) => {
@@ -23,8 +27,8 @@ const ButtonWithTheme = ({ theme }: { theme: string }) => {
   );
 };
 
-export const Template: StoryObj<typeof ButtonWithTheme> = {
-  args: { theme: 'default' },
+export const Dark: StoryObj<typeof ButtonWithTheme> = {
+  args: { theme: 'dark' },
   render: (args) => (
     <ThemeProvider>
       <ButtonWithTheme {...args} />
