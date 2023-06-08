@@ -7,6 +7,9 @@ export default {
   component: NavTab,
   tags: ['autodocs'],
   argTypes: {
+    color: {
+      control: 'color',
+    },
     name: {
       control: 'text',
     },
@@ -18,12 +21,15 @@ export default {
 
 export const Simple: StoryObj<typeof NavTab> = {
   args: {
+    color: 'blue',
     name: 'Home',
     to: '/',
   },
   render: (args: any) => (
     <Router>
-      <NavTab {...args} />
+      <div style={{ display: 'flex' }}>
+        <NavTab {...args} />
+      </div>
     </Router>
   ),
 };

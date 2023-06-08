@@ -1,0 +1,39 @@
+.custom-tab {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.15em;
+  min-width: 2.5em;
+  width: auto;
+  transform: scale(1);
+  transition: transform 1s ease-in-out 99999s;
+  &:active {
+    color: #000000;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-name: horizontal-shaking;
+  }
+  &:hover {
+    text-shadow: 0px 0px 1px 0px #180344;
+    transform: scale(1.1, 1.2);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
